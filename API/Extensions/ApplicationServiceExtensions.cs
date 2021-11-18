@@ -16,6 +16,7 @@ namespace API.Extensions
             // service will last until the end of HTTP request [AddScoped]
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IPhotoService, PhotoService>();
+            services.AddScoped<ILikesRepository, LikesRepository>();
             services.AddScoped<LogUserActivity>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
