@@ -22,7 +22,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     FileUploadModule,
     BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
   ],
   exports: [
     BsDropdownModule,

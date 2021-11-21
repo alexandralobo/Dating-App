@@ -26,6 +26,8 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { NgPipesModule } from 'ngx-pipes';
 
 // angular modules
 @NgModule({
@@ -45,7 +47,9 @@ import { DateInputComponent } from './_forms/date-input/date-input.component';
     MemberEditComponent,
     PhotoEditorComponent,
     TextInputComponent,
-    DateInputComponent
+    DateInputComponent,
+    MemberMessagesComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { DateInputComponent } from './_forms/date-input/date-input.component';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    NgPipesModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
