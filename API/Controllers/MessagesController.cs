@@ -50,7 +50,7 @@ namespace API.Controllers
 
             _messageRepository.AddMessage(message);
 
-            if (await _messageRepository.SaveAllAsycn()) return Ok(_mapper.Map<MessageDto>(message));
+            if (await _messageRepository.SaveAllAsync()) return Ok(_mapper.Map<MessageDto>(message));
             return BadRequest("Failed to send message");
 
         }
@@ -91,7 +91,7 @@ namespace API.Controllers
 
             if (message.SenderDeleted && message.RecipientDeleted) _messageRepository.DeleteMessage(message);
 
-            if (await _messageRepository.SaveAllAsycn()) return Ok();
+            if (await _messageRepository.SaveAllAsync()) return Ok();
 
             return BadRequest("Problem deleting the message");
 
